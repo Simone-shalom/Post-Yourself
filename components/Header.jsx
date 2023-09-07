@@ -2,7 +2,7 @@ import { HeartStraight, House, List, MagnifyingGlass, PaperPlane, PlusCircle, Us
 import { signIn, signOut, useSession } from 'next-auth/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 import { useRecoilState } from 'recoil'
 import { modalState } from '../atoms/modalAtom'
 
@@ -10,7 +10,7 @@ const Header = () => {
 
     const { data: session } = useSession()
 
-    const [open, setOpen] = useRecoilState(modalState)
+    const [ open, setOpen] = useRecoilState(modalState)
     
 
   return (
@@ -20,10 +20,7 @@ const Header = () => {
         {/*Left Side */}
         <div className='relative hidden lg:block cursor-pointer'>
             <Link href='/'>
-            <Image 
-                src='/f0d8c21f6255e45dbfaf0c23b89838f7.png'
-                width={150}
-                height={48}/>
+            <h1 className='text-2xl italic '>PostYourself</h1>
             </Link>
         </div>
         <div className='relative block lg:hidden flex-shrink-0 cursor-pointer'>
@@ -31,7 +28,8 @@ const Header = () => {
             <Image 
                 src='/logo-ig-instagram-icon-download-icons-12.png'
                 width={50}
-                height={32}/>
+                height={32}
+                alt=''/>
             </Link>
             
         </div>

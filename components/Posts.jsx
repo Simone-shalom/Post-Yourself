@@ -26,13 +26,7 @@ const Posts = () => {
 
    
 
-  },[db])
-
-  
-
-
-
-
+  },[])
 
   return (
     <div>

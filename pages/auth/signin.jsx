@@ -9,8 +9,8 @@ const signin = ({providers}) => {
 
     <div className='flex flex-col items-center justify-center h-screen -mt-48 py-2'>
 
-        <img src='/f0d8c21f6255e45dbfaf0c23b89838f7.png' alt=''/>
-        <p className='italic text-gray-500'>This is app for all the gachs out there</p>
+        <p className='text-3xl font-bold text-black italic mb-4'>Post Yourself</p>
+        <p className='italic text-gray-500'>This is app for all people out there</p>
         <div className='mt-32'>
             {Object.values(providers).map((provider) => (
             <div key={provider.name}>

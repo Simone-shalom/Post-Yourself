@@ -20,21 +20,21 @@ const SinglePost = ({id, username, img, postImg, caption}) => {
     snapshot => {setComments(snapshot.docs)
   })
 
-},[db])
+},[id])
 
   useEffect(() => {
     onSnapshot(collection(db, 'posts-ig', id, 'likes'), snapshot => {
       setLikes(snapshot.docs)
     })
-  },[db, id])
+  },[id])
 
 
   useEffect(() => {
     setHasLiked(likes.findIndex((like) => like.id === session?.user.uid) !==-1)
 
-  },[likes])
+  },[likes, session?.user.uid])
 
-console.log(hasLiked)
+
 
   const likesToPost = async () => {
     if(hasLiked){
@@ -63,7 +63,7 @@ console.log(hasLiked)
       })
   } 
 
-console.log(comments)
+
 
 
   return (
