@@ -30,7 +30,9 @@
 ### - Firebase functions
 ### - Responsive design 
 
-
+## Credentials:
+### - wellsimon89@gmail.com
+### - 12wellsimon89
 
 ## Local Development
 
